@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @* <title>@ViewData["Title"] - Mini_Project</title> *@
+    <link rel="icon" type="image/png" href="~/image/logo.png" />
+    <title>THT - Tech</title>
+    @* Boostrap Icon CDN *@
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    @* Bootstrap CDN *@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    @* Css style *@
+    <link rel="stylesheet" href="~/css/base.css">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="stylesheet" href="~/css/style-index.css">
+    <link rel="stylesheet" href="~/css/responsive.css">
+</head>
+
+<body>
+    @* Baner thông báo chương trình*@
+    <div class="header-banner py-2 text-light">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center justify-content-xl-between
+                align-items-center gap-2 text-center text-xl-start">
+                <p class="mb-0">Tuần lễ công nghệ mới: miễn phí giao nhanh nội thành và hỗ trợ trả góp 0%.</p>
+                <div class="header-banner-icons d-flex flex-wrap justify-content-center gap-3">
+                    <span class="d-inline-flex align-items-center">
+                        <i class="bi bi-lightning-charge-fill"></i> Flash deal mỗi ngày
+                    </span>
+                    <span class="d-inline-flex align-items-center">
+                        <i class="bi bi-shield-check"></i> Bảo hành minh bạch
+                    </span>
+                    <span class="d-inline-flex align-items-center"><i class="bi bi-headset"></i> Hỗ trợ 24/7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* Header *@
+    <header class="bg-white sticky-top shadow-sm">
+        <!-- Header PC -->
+        <div class="d-none d-xl-block shadow-sm">
+            <div class="row align-items-center justify-content-between">
+                @* Logo thương hiệu *@
+                <div class="col-lg-2">
+                    @* Định hướng tương lai khi nhấn vào logo chuyển sang trang sản phẩm *@
+                    <a href="#" class="text-decoration-none">
+                        <img src="~/image/logo.png" alt="ĐH Công Thương" class="img-fluid logo-img" />
+                    </a>
+                </div>
+
+                @* Tìm kiếm sản phẩm *@
+                <div class="col-lg-7">
+                    @* Thêm controllers thực hiện thao tác khi nhấn search *@
+                    @using (Html.BeginForm("Search", "Home", FormMethod.Get, new
+                    {
+                        @class = "search-form d-none d-xl-flex align-items-center",
+                        role = "search"
+                    }))
+                    {
+                        <i class="bi bi-search flex-shrink-0"></i>
+                        @Html.TextBox("keyword", null, new
+                        {
+                            @class = "form-control",
+                            type = "search",
+                            placeholder = "Tìm điện thoại..."
+                        })
+                        <button class="btn btn-accent" type="submit">Tìm</button>
+                    }
+                </div>
+
+                @* Thao tác người dùng *@
+                <div class="col-lg-3">
+                    @* Giỏ hàng sản phẩm yêu thích *@
+                    <div class="header-cart d-flex flex-wrap 
+                        justify-content-evenly align-items-center gap-2 ms-0">
+                        <a href="#" class="header-action-button position-relative p-0 
+                            d-inline-flex justify-content-center align-items-center text-decoration-none">
+                            <i class="bi bi-cart2 fs-5"></i>
+                            <span class="header-badge position-absolute d-inline-flex justify-content-center 
+                                align-items-center text-light" data-cart-count> 0
+                            </span>
+                        </a>
+
+                        @* Login *@
+                        @if (User.Identity?.IsAuthenticated == true)
+                        {
+                            <a href="#" class="header-account d-none d-md-inline-flex align-items-center 
+                                justify-content-center text-decoration-none position-relative">
+                                <i class="bi bi-person-circle fs-4 me-2"></i>
+                                <span class="overflow-hidden">@User.Identity.Name</span>
+                            </a>
+                        }
+                        else
+                        {
+                            <a href="#" class="header-account d-none d-md-inline-flex align-items-center 
+                                justify-content-center text-decoration-none position-relative">
+                                <i class="bi bi-person-circle fs-4 me-2"></i>
+                                <span class="overflow-hidden">Đăng Nhập</span>
+                            </a>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            @* Thanh điều hướng *@
+            <nav class="nav-gradient w-100">
+                <div class="container">
+                    <ul class="nav justify-content-center py-1 gap-4">
+                        <li class="nav-item"><a class="nav-link fs-5 text-white" href="#">Trang chủ</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-white" href="#">Sản phẩm</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-white" href="#">Liên hệ</a></li>
+                        <li class="nav-item"><a class="nav-link fs-5 text-white" href="#">Khuyến Mãi</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Header mobile -->
+        <div class="d-xl-none d-flex justify-content-between align-items-center px-3 py-2 w-100">
+            <button class="btn border-0 p-0 fs-1 text-dark" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Mở menu">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <a href="#">
+                <img src="~/image/logo.png" alt="ĐH Công Thương" height="50" />
+            </a>
+
+            <a href="#" class="header-action-button position-relative p-0 d-inline-flex 
+                justify-content-center align-items-center text-decoration-none">
+                <i class="bi bi-cart2 fs-5"></i>
+                <span class="header-badge position-absolute d-inline-flex justify-content-center
+                    align-items-center text-light" data-cart-count> 0
+                </span>
+            </a>
+        </div>
+
+        <!-- Menu truot cho mobile -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header border-bottom">
+                <h2 class="visually-hidden" id="mobileMenuLabel">Menu di động</h2>
+                <img src="~/image/logo.png" alt="ĐH Công Thương" height="50" />
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close">
+                </button>
+            </div>
+
+            <div class="offcanvas-body d-flex flex-column p-0">
+                @* Thanh điều hướng giao diện mobile *@
+                <ul class="nav flex-column fs-6">
+                    <li class="nav-item border-bottom">
+                        <a class="nav-link text-dark py-3 px-4 fw-medium" href="#">SẢN PHẨM</a>
+                    </li>
+                    <li class="nav-item border-bottom">
+                        <a class="nav-link mobile-nav-link text-dark py-3 px-4 fw-medium" href="#">LIÊN HỆ</a>
+                    </li>
+                    <li class="nav-item border-bottom">
+                        <a class="nav-link text-dark py-3 px-4 fw-medium" href="#" data-filter-shortcut="all">
+                            KHUYẾN MÃI
+                        </a>
+                    </li>
+                </ul>
+
+                @* Login giao diện mobile *@
+                <div class="mt-auto pt-4 border-top">
+                    @if (User.Identity?.IsAuthenticated == true)
+                    {
+                        <a href="#"
+                           class="btn btn-dark w-100 rounded-0 d-flex align-items-center justify-content-center gap-2 py-2.5">
+                            <i class="bi bi-person-circle"></i>
+                            <span>@User.Identity.Name</span>
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="#"
+                           class="btn btn-dark w-100 rounded-0 d-flex align-items-center justify-content-center gap-2 py-2.5">
+                            <i class="bi bi-box-arrow-in-right"></i>
+                            <span>Đăng Nhập</span>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @* Main *@
+    <main class="main">
+        @RenderBody()
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-modern py-5">
+        <div class="container">
+            <div class="row g-4 justify-content-between">
+                <div class="col-12 col-md-6 col-lg-5">
+                    <div class="footer-contact-info">
+                        <h3 class="footer-heading mb-4 text-gradient-orange">Liên Hệ Trung Tâm</h3>
+                        <h4 class="h5 text-white mb-4 fw-bold">Trung tâm hỗ trợ sinh viên - HUIT</h4>
+
+                        <ul class="list-unstyled footer-contact-list">
+                            <li class="d-flex align-items-start mb-3">
+                                <i class="bi bi-geo-alt-fill text-accent-blue me-3 mt-1"></i>
+                                <span><strong>Địa chỉ:</strong> 140 Lê Trọng Tấn, Q. Tân Phú, TP. HCM</span>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <i class="bi bi-envelope-fill text-accent-blue me-3"></i>
+                                <span>
+                                    <strong>Email:</strong>
+                                    <a href="mailto:hotrosv@huit.edu.vn"
+                                       class="text-decoration-none text-footer-link">hotrosv@huit.edu.vn
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="d-flex align-items-center mb-4">
+                                <i class="bi bi-telephone-fill text-accent-blue me-3"></i>
+                                <span>
+                                    <strong>Hotline:</strong>
+                                    <a href="tel:0909888777"
+                                       class="text-decoration-none text-footer-link fw-bold text-orange">0909 888 777
+                                    </a>
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div class="footer-socials d-flex gap-2">
+                            <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="social-icon-btn" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+                            <a href="#" class="social-icon-btn" aria-label="Tiktok"><i class="bi bi-tiktok"></i></a>
+                            <a href="#" class="social-icon-btn" aria-label="Globe"><i class="bi bi-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="footer-map-wrapper">
+                        <h3 class="footer-heading mb-4 text-gradient-orange">Vị Trí Bản Đồ</h3>
+                        <div class="map-container shadow">
+                            <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.0673482314114!2d106.6237946776944!3d10.806153861869756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be27d8b4f4d%3A0x92dcba2950430867!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBUaMawxqFuZyBUUC4gSOG7kyBDaMOtIE1pbmggKEhVSVQp!5e0!3m2!1svi!2s!4v1778957899889!5m2!1svi!2s"
+                            width="100%" height="220" allowfullscreen="" loading="lazy" class="footer-map-frame"
+                            title="Bản đồ HUIT"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider my-4" />
+
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright-text mb-0 text-light">© 2026 Trung Tâm Hỗ Trợ Sinh Viên - HUIT. All Rights
+                        Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/script-index.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+
+</html>

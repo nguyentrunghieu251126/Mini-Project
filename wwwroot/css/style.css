@@ -1,0 +1,264 @@
+/* ========================================= Thanh thông báo đầu trang ========================================= */
+.header-banner {
+  font-size: 0.92rem;
+  background: var(--bg-menu-gradient);
+}
+
+.header-banner-icons span {
+  gap: 0.4rem;
+  opacity: 0.86;
+}
+
+/* ========================================= Header ========================================= */
+.logo-img {
+  object-fit: contain;
+}
+
+/* Css cho phần tìm kiếm */
+.search-form {
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 0.35rem 0.35rem 0.35rem 1rem;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.search-form.d-none.d-xl-flex {
+  flex: 0 1 360px;
+  margin-left: auto;
+}
+
+.search-form i {
+  color: var(--text-sub);
+}
+
+.search-form .form-control {
+  min-width: 0;
+  padding-left: 0;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.search-form .form-control::placeholder {
+  color: #96a1b3;
+}
+
+/* Css phần giỏ hàng và đăng nhập */
+.header-cart {
+  flex: 0 0 auto;
+  gap: 0.75rem;
+}
+
+.header-action-button {
+  width: 50px;
+}
+
+.header-account {
+  max-width: 100%;
+  padding: 0 1rem;
+}
+
+.header-account span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.header-action-button i,
+.header-account i {
+  font-size: 1.15rem;
+}
+
+.header-action-button,
+.header-account {
+  gap: 0.55rem;
+  min-width: 50px;
+  height: 50px;
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.94);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.header-action-button:hover,
+.header-account:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 81, 255, 0.28);
+  box-shadow: 0 16px 24px rgba(15, 23, 42, 0.08);
+}
+
+.header-badge {
+  top: 2px;
+  right: 2px;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: var(--brand-orange);
+}
+
+/* Menu điều hướng */
+.nav-gradient {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  border-bottom: 0 solid rgba(255, 255, 255, 0.05);
+}
+
+header nav .nav-link {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 400;
+  text-decoration: none;
+  background: transparent;
+}
+
+/* Khai báo biến css tùy chỉnh dùng làm hiệu ứng xoay xung quanh viền */
+@property --draw-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+header nav .nav-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  background: conic-gradient(from -90deg, #00f7ff var(--draw-angle), transparent var(--draw-angle)) border-box;
+  pointer-events: none;
+  /* Tạo hiệu ứng chuyển động */
+  transition: --draw-angle 0.8s ease-in-out;
+  /* Set góc ban đầu là 0 */
+  --draw-angle: 0deg;
+  /* Tạo lớp hiển thị viền của phần tử */
+  -webkit-mask:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(white, white);
+  /* Ẩn đi nôi dung bên trong */
+  -webkit-mask-composite: destination-out;
+  /* Tương thích với các trình duyệt hỗ trợ chuẩn css */
+  mask:
+    linear-gradient(white, white) padding-box,
+    linear-gradient(white, white);
+  /* Kết hợp hai lớp mask để tạo hiệu ứng chỉ hiển thị đường viền */
+  mask-composite: exclude;
+}
+
+header nav .nav-link:hover::before {
+  --draw-angle: 360deg;
+}
+
+header nav .nav-link:hover {
+  color: #00f7ff !important;
+  transition: color 0.3s ease;
+}
+
+/*  ========================================= Footer  ========================================= */
+.footer-modern {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: lightgray;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.text-gradient-orange {
+  background: linear-gradient(135deg, var(--brand-orange), #ff9351);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-footer-link {
+  color: #d1d5db;
+  transition: color 0.25s ease;
+}
+
+.text-footer-link:hover {
+  color: var(--brand-blue) !important;
+}
+
+.text-orange {
+  color: var(--brand-orange) !important;
+}
+
+.text-accent-blue {
+  color: #3b82f6;
+  font-size: 1.1rem;
+}
+
+.footer-contact-list li span {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.social-icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #9ca3af;
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon-btn:hover {
+  color: #fff;
+  background: var(--brand-orange);
+  border-color: var(--brand-orange);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(255, 122, 24, 0.25);
+}
+
+.map-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #1f2937;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.map-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.map-container iframe {
+  display: block;
+  filter: grayscale(10%) contrast(105%);
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.08);
+  opacity: 1;
+}
+
+.copyright-text {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  letter-spacing: 0.02em;
+}
