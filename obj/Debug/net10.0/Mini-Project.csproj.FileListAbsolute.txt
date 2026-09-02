@@ -98,3 +98,4 @@ D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\v9drr1ceml-{0}-ktn7dsw5tv-ktn7dsw5tv.gz
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\q46jgwd00x-{0}-itf8t7rwsr-itf8t7rwsr.gz
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\iq6ooj33tg-{0}-o4q8656jnd-o4q8656jnd.gz
+D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\Mini-Project.sourcelink.json
