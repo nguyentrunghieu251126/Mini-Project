@@ -30,6 +30,16 @@
   margin-left: auto;
 }
 
+.mobile-search-form {
+  flex: 1 1 auto;
+  margin: 0 0.75rem;
+}
+
+.mobile-search-form .btn {
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+}
+
 .search-form i {
   color: var(--text-sub);
 }

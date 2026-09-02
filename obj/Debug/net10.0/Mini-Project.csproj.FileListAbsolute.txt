@@ -97,5 +97,14 @@ D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\kdiw60opi9-{0}-g6wnaduge1-g6wnaduge1.gz
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\v9drr1ceml-{0}-ktn7dsw5tv-ktn7dsw5tv.gz
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\q46jgwd00x-{0}-itf8t7rwsr-itf8t7rwsr.gz
-D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\iq6ooj33tg-{0}-o4q8656jnd-o4q8656jnd.gz
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\Mini-Project.sourcelink.json
+D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\iq6ooj33tg-{0}-exjv36vxi0-exjv36vxi0.gz
+D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\appsettings.Development.json
+D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\appsettings.json
+D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\Mini-Project.staticwebassets.runtime.json
+D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\Mini-Project.staticwebassets.endpoints.json
+D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\Mini-Project.exe
+D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\Mini-Project.deps.json
+D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\Mini-Project.runtimeconfig.json
+D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\Mini-Project.dll
+D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\Mini-Project.pdb

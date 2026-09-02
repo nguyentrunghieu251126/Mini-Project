@@ -127,9 +127,21 @@
                 <i class="bi bi-list"></i>
             </button>
 
-            <a href="#">
-                <img src="~/image/logo.png" alt="ĐH Công Thương" height="50" />
-            </a>
+            @using (Html.BeginForm("Search", "Home", FormMethod.Get, new
+            {
+                @class = "search-form mobile-search-form d-flex align-items-center",
+                role = "search"
+            }))
+            {
+                <i class="bi bi-search flex-shrink-0"></i>
+                @Html.TextBox("keyword", null, new
+                {
+                    @class = "form-control",
+                    type = "search",
+                    placeholder = "Tìm điện thoại..."
+                })
+                <button class="btn btn-accent" type="submit">Tìm</button>
+            }
 
             <a href="#" class="header-action-button position-relative p-0 d-inline-flex 
                 justify-content-center align-items-center text-decoration-none">
