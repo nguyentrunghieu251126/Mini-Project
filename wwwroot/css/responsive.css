@@ -80,6 +80,40 @@
   .section-one-floating-card p {
     font-size: 0.8rem;
   }
+
+  /* Section two */
+  .category-strip {
+    margin-top: 0;
+  }
+
+  .category-shell {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .category-pill {
+    flex-direction: row !important;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .category-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .category-pill strong {
+    font-size: 0.95rem;
+  }
+
+  .category-pill small {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -108,6 +142,33 @@
   .section-one-floating-card-light {
     top: 0.4rem;
     right: -0.5rem;
+  }
+
+  /* Section two */
+  .category-shell {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+    padding: 0.75rem;
+  }
+
+  .category-pill {
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .category-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .category-pill strong {
+    font-size: 0.9rem;
+  }
+
+  .category-pill small {
+    font-size: 0.8rem;
   }
 
   /* Footer */
@@ -152,6 +213,7 @@
 
 /* Màn hình dưới 576px (Mobile nhỏ) */
 @media (max-width: 575.98px) {
+  /* Section one */
   .section-one .eyebrow {
     gap: 0.35rem;
     padding: 0.34rem 0.62rem;
@@ -216,5 +278,32 @@
 
   .section-one-floating-card p {
     font-size: 0.7rem;
+  }
+
+  /* Section two */
+  .category-shell {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .category-pill {
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .category-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+    border-radius: 12px;
+  }
+
+  .category-pill strong {
+    font-size: 0.85rem;
+  }
+
+  .category-pill small {
+    font-size: 0.65rem;
   }
 }

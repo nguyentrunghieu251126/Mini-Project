@@ -3,15 +3,19 @@
   --font-body: "Plus Jakarta Sans", sans-serif;
   --font-heading: "Space Grotesk", sans-serif;
   --font-footer: "Times New Roman", Times, serif;
+  --brand-dark: #0f172a;
+  --brand-blue: #2251ff;
+  --brand-blue-soft: #e8efff;
+  --brand-orange: #ff7a18;
+  --brand-orange-soft: #fff1e7;
+  --brand-green: #10b981;
+  --text-main: #162033;
   --text-sub: #5d6b82;
   --border-soft: rgba(22, 32, 51, 0.1);
-  --brand-orange: #ff7a18;
-  --brand-blue: #2251ff;
-  --text-main: #162033;
-  --brand-blue-soft: #e8efff;
-  --bg-menu-gradient: linear-gradient(90deg, #0f172a, #19376d);
   --shadow-lg: 0 30px 70px rgba(15, 23, 42, 0.14);
   --shadow-md: 0 18px 35px rgba(15, 23, 42, 0.08);
+  --radius-xl: 32px;
+  --bg-menu-gradient: linear-gradient(90deg, #0f172a, #19376d);
 }
 
 /* Cấu hình mặt định cho trang */
@@ -117,4 +121,24 @@ img {
 [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Danh mục viên thuốc */
+.category-pill strong,
+.category-pill small,
+.product-name,
+.product-desc {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.category-icon,
+.service-icon {
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 1.45rem;
 }
