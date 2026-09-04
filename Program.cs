@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Mini_Project.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<TechnologyDeviceStoreContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
