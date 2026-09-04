@@ -294,3 +294,61 @@
   color: var(--brand-green);
   background: rgba(16, 185, 129, 0.14);
 }
+
+/* Section three */
+.section-three {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 3rem;
+}
+
+/* Hiệu ứng và bo góc cho ảnh banner */
+.section-three-img-custom {
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.section-three-img-custom:hover {
+  transform: translateY(-2px);
+}
+
+.section-three-navigation {
+  width: 45px;
+  height: 45px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.carousel:hover .section-three-navigation {
+  opacity: 0.95;
+  visibility: visible;
+}
+
+.section-three-navigation:hover {
+  opacity: 1 !important;
+  background-color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.section-three-navigation.carousel-control-prev {
+  left: -20px;
+}
+
+.section-three-navigation.carousel-control-next {
+  right: -20px;
+}
+
+.section-three-navigation-icon {
+  filter: invert(1) grayscale(100%) brightness(0);
+  width: 1.2rem;
+  height: 1.2rem;
+}

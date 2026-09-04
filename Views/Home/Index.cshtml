@@ -81,7 +81,7 @@
     </div>
 </section>
 
-<!-- Danh mục chi cập nhanh -->
+@* Danh mục chi cập nhanh *@
 <section class="section-two">
     <div class="container">
         <div class="category-shell" data-reveal>
@@ -113,6 +113,149 @@
                     <small>Sạc nhanh, tai nghe, hệ sinh thái gọn nhẹ</small>
                 </span>
             </a>
+        </div>
+    </div>
+</section>
+
+@* Banner Carousel Section *@
+<section class="section-three mt-5">
+    <div class="container" data-reveal>
+        @* Giao diện PC *@
+        <div id="promoCarouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
+             data-bs-interval="4000">
+            <div class="carousel-inner rounded-4">
+                @* Slide 1 *@
+                <div class="carousel-item active">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel/anh1.webp" class="d-block w-100 section-three-img-custom"
+                                     alt="Khuyến mãi 1">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel/anh2.webp" class="d-block w-100 section-three-img-custom"
+                                     alt="Khuyến mãi 2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                @* Slide 2 *@
+                <div class="carousel-item">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel/anh3.webp" class="d-block w-100 section-three-img-custom"
+                                     alt="Khuyến mãi 3">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel/anh4.webp" class="d-block w-100 section-three-img-custom"
+                                     alt="Khuyến mãi 4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                @* Slide 3 *@
+                <div class="carousel-item">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel/anh5.webp" class="d-block w-100 section-three-img-custom"
+                                     alt="Khuyến mãi 5">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel/anh6.webp" class="d-block w-100 section-three-img-custom"
+                                     alt="Khuyến mãi 6">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Nút điều hướng *@
+            <button class="carousel-control-prev section-three-navigation" type="button"
+                    data-bs-target="#promoCarouselDesktop" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon section-three-navigation-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next section-three-navigation" type="button"
+                    data-bs-target="#promoCarouselDesktop" data-bs-slide="next">
+                <span class="carousel-control-next-icon section-three-navigation-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        @* Gieo diện mobile *@
+        <div id="promoCarouselMobile" class="carousel slide d-block d-md-none" data-bs-ride="carousel"
+             data-bs-interval="4000">
+            <div class="carousel-inner rounded-4">
+                @* Slide 1 *@
+                <div class="carousel-item active">
+                    <a href="#">
+                        <img src="~/image/Carousel/anh1.webp" class="d-block w-100 section-three-img-custom"
+                             alt="Khuyến mãi 1">
+                    </a>
+                </div>
+
+                @* Slide 2 *@
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="~/image/Carousel/anh2.webp" class="d-block w-100 section-three-img-custom"
+                             alt="Khuyến mãi 2">
+                    </a>
+                </div>
+
+                @* Slide 3 *@
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="~/image/Carousel/anh3.webp" class="d-block w-100 section-three-img-custom"
+                             alt="Khuyến mãi 3">
+                    </a>
+                </div>
+
+                @* Slide 4 *@
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="~/image/Carousel/anh4.webp" class="d-block w-100 section-three-img-custom"
+                             alt="Khuyến mãi 4">
+                    </a>
+                </div>
+
+                @* Slide 5 *@
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="~/image/Carousel/anh5.webp" class="d-block w-100 section-three-img-custom"
+                             alt="Khuyến mãi 5">
+                    </a>
+                </div>
+
+                @* Slide 6 *@
+                <div class="carousel-item">
+                    <a href="#">
+                        <img src="~/image/Carousel/anh6.webp" class="d-block w-100 section-three-img-custom"
+                             alt="Khuyến mãi 6">
+                    </a>
+                </div>
+            </div>
+
+            @* Nút điều hướng *@
+            <button class="carousel-control-prev section-three-navigation" type="button"
+                    data-bs-target="#promoCarouselMobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon section-three-navigation-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next section-three-navigation" type="button"
+                    data-bs-target="#promoCarouselMobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon section-three-navigation-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </div>
 </section>

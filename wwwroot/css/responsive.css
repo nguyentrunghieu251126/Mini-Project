@@ -209,6 +209,18 @@
   .map-container iframe {
     height: 190px;
   }
+
+  /* Section three */
+  .section-three-navigation.carousel-control-prev {
+    left: 5px;
+  }
+  .section-three-navigation.carousel-control-next {
+    right: 5px;
+  }
+  .section-three-navigation {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 /* Màn hình dưới 576px (Mobile nhỏ) */

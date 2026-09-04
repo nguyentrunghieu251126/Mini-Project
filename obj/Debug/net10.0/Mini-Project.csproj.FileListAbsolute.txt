@@ -106,8 +106,6 @@ D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\Mini-Project.
 D:\Programming\Website\WebDevelopment\Mini-Project\tmp-build-check\Mini-Project.pdb
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\iq6ooj33tg-{0}-irfedkpkky-irfedkpkky.gz
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\v9drr1ceml-{0}-b8a2wocaka-b8a2wocaka.gz
-D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\q46jgwd00x-{0}-151r19gfip-151r19gfip.gz
-D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\gp9i0bedvm-{0}-ce65yq8t3x-ce65yq8t3x.gz
 D:\Programming\Website\WebDevelopment\Mini-Project\bin\Debug\net10.0\Azure.Core.dll
 D:\Programming\Website\WebDevelopment\Mini-Project\bin\Debug\net10.0\Azure.Identity.dll
 D:\Programming\Website\WebDevelopment\Mini-Project\bin\Debug\net10.0\Humanizer.dll
@@ -242,3 +240,5 @@ D:\Programming\Website\WebDevelopment\Mini-Project\bin\Debug\net10.0\runtimes\wi
 D:\Programming\Website\WebDevelopment\Mini-Project\bin\Debug\net10.0\runtimes\win-x86\native\msalruntime_x86.dll
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\Mini-Project.csproj.AssemblyReference.cache
 D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\Mini-Pro.89BDAE0A.Up2Date
+D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\q46jgwd00x-{0}-xq1eudt7zd-xq1eudt7zd.gz
+D:\Programming\Website\WebDevelopment\Mini-Project\obj\Debug\net10.0\compressed\gp9i0bedvm-{0}-er5sxvhmq7-er5sxvhmq7.gz
