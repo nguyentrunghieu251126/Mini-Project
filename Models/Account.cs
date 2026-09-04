@@ -17,7 +17,7 @@ public partial class Account
 
     public string? Email { get; set; }
 
-    public int? TongDiem { get; set; }
+    public int TongDiem { get; set; }
 
     public virtual ICollection<Address> Addresses { get; set; } = new List<Address>();
 

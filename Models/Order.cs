@@ -11,9 +11,9 @@ public partial class Order
 
     public int? MaDiaChi { get; set; }
 
-    public DateTime? NgayDatHang { get; set; }
+    public DateTime NgayDatHang { get; set; }
 
-    public string? TrangThai { get; set; }
+    public string TrangThai { get; set; } = null!;
 
     public string? PhuongThucGiaoHang { get; set; }
 

@@ -7,7 +7,7 @@ public partial class ProductVariant
 {
     public int MaBienThe { get; set; }
 
-    public string? MaSp { get; set; }
+    public string MaSp { get; set; } = null!;
 
     public string? MauSac { get; set; }
 
@@ -19,7 +19,9 @@ public partial class ProductVariant
 
     public string? HinhAnh { get; set; }
 
-    public virtual Product? MaSpNavigation { get; set; }
+    public int SoLuongTon { get; set; }
+
+    public virtual Product MaSpNavigation { get; set; } = null!;
 
     public virtual ICollection<OrderDetail> OrderDetails { get; set; } = new List<OrderDetail>();
 }

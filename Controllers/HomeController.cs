@@ -6,9 +6,17 @@ namespace Mini_Project.Controllers;
 
 public class HomeController : Controller
 {
+    private readonly TechnologyDeviceStoreContext _context;
+    public HomeController(TechnologyDeviceStoreContext context)
+    {
+        _context = context;
+    }
+
     public IActionResult Index()
     {
-        return View();
+        // Lấy danh sách sản phẩm và truyền sang View
+        var products = _context.Products.ToList();
+        return View(products);
     }
 
     public IActionResult Privacy()

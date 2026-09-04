@@ -19,7 +19,7 @@ public partial class Address
 
     public string? LoaiDiaChi { get; set; }
 
-    public bool? LaDiaChiMacDinh { get; set; }
+    public bool LaDiaChiMacDinh { get; set; }
 
     public virtual Account? MaTaiKhoanNavigation { get; set; }
 

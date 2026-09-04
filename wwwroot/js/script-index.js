@@ -99,3 +99,14 @@ function taoHieuUngTangSo(counter) {
   };
   requestAnimationFrame(update);
 }
+
+// Hàm cuộn ngang danh sách sản phẩm section-four
+function scrollProducts(offset) {
+  const container = document.getElementById("productScrollContainer");
+  if (container) {
+    container.scrollBy({
+      left: offset,
+      behavior: "smooth",
+    });
+  }
+}

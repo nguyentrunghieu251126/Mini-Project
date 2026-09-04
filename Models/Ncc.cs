@@ -5,7 +5,7 @@ namespace Mini_Project.Models;
 
 public partial class Ncc
 {
-    public int MaNcc { get; set; }
+    public string MaNcc { get; set; } = null!;
 
     public string TenNcc { get; set; } = null!;
 

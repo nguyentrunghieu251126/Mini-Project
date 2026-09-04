@@ -302,7 +302,6 @@
   margin-bottom: 3rem;
 }
 
-/* Hiệu ứng và bo góc cho ảnh banner */
 .section-three-img-custom {
   border-radius: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -351,4 +350,72 @@
   filter: invert(1) grayscale(100%) brightness(0);
   width: 1.2rem;
   height: 1.2rem;
+}
+
+/* Section four */
+.product-scroll-wrapper {
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.product-scroll-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  width: 230px;
+  border-radius: 16px;
+  border: 1px solid transparent !important;
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.product-card img {
+  height: 200px;
+  transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+  transform: translateY(-6px);
+}
+
+.section-four-nav {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 1.2rem;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.section-four .container:hover .section-four-nav {
+  opacity: 0.95;
+  visibility: visible;
+}
+.section-four-nav:hover {
+  opacity: 1 !important;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  background-color: #f8f9fa;
+}
+
+.section-four-nav.btn-prev {
+  left: -15px;
+}
+.section-four-nav.btn-next {
+  right: -15px;
 }

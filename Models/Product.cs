@@ -13,11 +13,15 @@ public partial class Product
 
     public string? ThuongHieu { get; set; }
 
-    public int? MaNcc { get; set; }
+    public string? MaNcc { get; set; }
+
+    public decimal DonGia { get; set; }
 
     public string? MoTa { get; set; }
 
-    public decimal? DanhGia { get; set; }
+    public string? HinhAnh { get; set; }
+
+    public decimal DanhGia { get; set; }
 
     public virtual Ncc? MaNccNavigation { get; set; }
 

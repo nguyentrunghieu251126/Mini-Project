@@ -1,4 +1,6 @@
-﻿@* Khu vực giới thiệu *@
+﻿@model IEnumerable<Mini_Project.Models.Product>
+
+@* Khu vực giới thiệu *@
 <section class="section-one">
     <div class="container">
         <div class="row g-4 align-items-center">
@@ -117,7 +119,7 @@
     </div>
 </section>
 
-@* Banner Carousel Section *@
+@* Banner Carousel giới thiệu sản phẩm *@
 <section class="section-three mt-5">
     <div class="container" data-reveal>
         @* Giao diện PC *@
@@ -129,14 +131,14 @@
                     <div class="row g-3">
                         <div class="col-6">
                             <a href="#">
-                                <img src="~/image/Carousel/anh1.webp" class="d-block w-100 section-three-img-custom"
-                                     alt="Khuyến mãi 1">
+                                <img src="~/image/Carousel-Goods/anh1.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Khuyến mãi 1">
                             </a>
                         </div>
                         <div class="col-6">
                             <a href="#">
-                                <img src="~/image/Carousel/anh2.webp" class="d-block w-100 section-three-img-custom"
-                                     alt="Khuyến mãi 2">
+                                <img src="~/image/Carousel-Goods/anh2.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Khuyến mãi 2">
                             </a>
                         </div>
                     </div>
@@ -147,14 +149,14 @@
                     <div class="row g-3">
                         <div class="col-6">
                             <a href="#">
-                                <img src="~/image/Carousel/anh3.webp" class="d-block w-100 section-three-img-custom"
-                                     alt="Khuyến mãi 3">
+                                <img src="~/image/Carousel-Goods/anh3.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Khuyến mãi 3">
                             </a>
                         </div>
                         <div class="col-6">
                             <a href="#">
-                                <img src="~/image/Carousel/anh4.webp" class="d-block w-100 section-three-img-custom"
-                                     alt="Khuyến mãi 4">
+                                <img src="~/image/Carousel-Goods/anh4.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Khuyến mãi 4">
                             </a>
                         </div>
                     </div>
@@ -165,14 +167,14 @@
                     <div class="row g-3">
                         <div class="col-6">
                             <a href="#">
-                                <img src="~/image/Carousel/anh5.webp" class="d-block w-100 section-three-img-custom"
-                                     alt="Khuyến mãi 5">
+                                <img src="~/image/Carousel-Goods/anh5.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Khuyến mãi 5">
                             </a>
                         </div>
                         <div class="col-6">
                             <a href="#">
-                                <img src="~/image/Carousel/anh6.webp" class="d-block w-100 section-three-img-custom"
-                                     alt="Khuyến mãi 6">
+                                <img src="~/image/Carousel-Goods/anh6.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Khuyến mãi 6">
                             </a>
                         </div>
                     </div>
@@ -199,7 +201,7 @@
                 @* Slide 1 *@
                 <div class="carousel-item active">
                     <a href="#">
-                        <img src="~/image/Carousel/anh1.webp" class="d-block w-100 section-three-img-custom"
+                        <img src="~/image/Carousel-Goods/anh1.webp" class="d-block w-100 section-three-img-custom"
                              alt="Khuyến mãi 1">
                     </a>
                 </div>
@@ -207,7 +209,7 @@
                 @* Slide 2 *@
                 <div class="carousel-item">
                     <a href="#">
-                        <img src="~/image/Carousel/anh2.webp" class="d-block w-100 section-three-img-custom"
+                        <img src="~/image/Carousel-Goods/anh2.webp" class="d-block w-100 section-three-img-custom"
                              alt="Khuyến mãi 2">
                     </a>
                 </div>
@@ -215,7 +217,7 @@
                 @* Slide 3 *@
                 <div class="carousel-item">
                     <a href="#">
-                        <img src="~/image/Carousel/anh3.webp" class="d-block w-100 section-three-img-custom"
+                        <img src="~/image/Carousel-Goods/anh3.webp" class="d-block w-100 section-three-img-custom"
                              alt="Khuyến mãi 3">
                     </a>
                 </div>
@@ -223,7 +225,7 @@
                 @* Slide 4 *@
                 <div class="carousel-item">
                     <a href="#">
-                        <img src="~/image/Carousel/anh4.webp" class="d-block w-100 section-three-img-custom"
+                        <img src="~/image/Carousel-Goods/anh4.webp" class="d-block w-100 section-three-img-custom"
                              alt="Khuyến mãi 4">
                     </a>
                 </div>
@@ -231,7 +233,7 @@
                 @* Slide 5 *@
                 <div class="carousel-item">
                     <a href="#">
-                        <img src="~/image/Carousel/anh5.webp" class="d-block w-100 section-three-img-custom"
+                        <img src="~/image/Carousel-Goods/anh5.webp" class="d-block w-100 section-three-img-custom"
                              alt="Khuyến mãi 5">
                     </a>
                 </div>
@@ -239,7 +241,7 @@
                 @* Slide 6 *@
                 <div class="carousel-item">
                     <a href="#">
-                        <img src="~/image/Carousel/anh6.webp" class="d-block w-100 section-three-img-custom"
+                        <img src="~/image/Carousel-Goods/anh6.webp" class="d-block w-100 section-three-img-custom"
                              alt="Khuyến mãi 6">
                     </a>
                 </div>
@@ -253,6 +255,185 @@
             </button>
             <button class="carousel-control-next section-three-navigation" type="button"
                     data-bs-target="#promoCarouselMobile" data-bs-slide="next">
+                <span class="carousel-control-next-icon section-three-navigation-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+@* Danh sách sản phẩm *@
+<section class="section-four mt-5">
+    <div class="container position-relative bg-white rounded-4 p-4 shadow-sm" data-reveal>
+        <h3 class="fw-bold mb-4">Tự Teen Chinh Phục Hành Trình Mới</h3>
+
+        @* Khung chứa danh sách sản phẩm *@
+        <div class="product-scroll-wrapper d-flex gap-4 overflow-x-auto" id="productScrollContainer">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var item in Model)
+                {
+                    <div class="card border-0 product-card flex-shrink-0">
+                        <img src="@item.HinhAnh" class="card-img-top p-3 img-fluid object-fit-contain" alt="@item.TenSp">
+                        <div class="card-body px-3 pb-4 pt-2">
+                            <span class="badge border border-secondary text-secondary rounded-pill mb-2 px-2 py-1">
+                                Trả góp 0%
+                            </span>
+                            <h5 class="text-danger fw-bold mb-1">@item.DonGia.ToString("N0")đ</h5>
+                            <p class="card-text text-truncate mb-0">@item.TenSp</p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+        @* Nút điều hướng tự viết *@
+        <button class="section-four-nav btn-prev" type="button" onclick="scrollProducts(-300)">
+            <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="section-four-nav btn-next" type="button" onclick="scrollProducts(300)">
+            <i class="bi bi-chevron-right"></i>
+        </button>
+    </div>
+</section>
+
+@* Banner Carousel Ưu đãi thanh toán *@
+<section class="section-five mt-5">
+    <div class="container" data-reveal>
+        <h3 class="fw-bold mb-4">Ưu đãi thanh toán</h3>
+        @* Giao diện PC *@
+        <div id="voucherCarouselDesktop" class="carousel slide d-none d-md-block" data-bs-ride="carousel"
+             data-bs-interval="4500">
+            <div class="carousel-inner rounded-4">
+                @* Slide 1 *@
+                <div class="carousel-item active">
+                    <div class="row g-3">
+                        <div class="col-4">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh1.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 1">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh2.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 2">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh3.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 3">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                @* Slide 2 *@
+                <div class="carousel-item">
+                    <div class="row g-3">
+                        <div class="col-4">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh4.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 4">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh5.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 5">
+                            </a>
+                        </div>
+                        <div class="col-4">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh6.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 6">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Nút điều hướng (Tái sử dụng 100% CSS của section-three) *@
+            <button class="carousel-control-prev section-three-navigation" type="button"
+                    data-bs-target="#voucherCarouselDesktop" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon section-three-navigation-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next section-three-navigation" type="button"
+                    data-bs-target="#voucherCarouselDesktop" data-bs-slide="next">
+                <span class="carousel-control-next-icon section-three-navigation-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        @* 2. GIAO DIỆN MOBILE (2 hình/slide) *@
+        <div id="voucherCarouselMobile" class="carousel slide d-block d-md-none" data-bs-ride="carousel"
+             data-bs-interval="4500">
+            <div class="carousel-inner rounded-4">
+                @* Slide 1 *@
+                <div class="carousel-item active">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh1.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 1">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh2.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 2">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                @* Slide 2 *@
+                <div class="carousel-item">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh3.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 3">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh4.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 4">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                @* Slide 3 *@
+                <div class="carousel-item">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh5.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 5">
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#">
+                                <img src="~/image/Carousel-Vouchers/anh6.webp"
+                                     class="d-block w-100 section-three-img-custom" alt="Ưu đãi 6">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* Nút điều hướng mobile *@
+            <button class="carousel-control-prev section-three-navigation" type="button"
+                    data-bs-target="#voucherCarouselMobile" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon section-three-navigation-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next section-three-navigation" type="button"
+                    data-bs-target="#voucherCarouselMobile" data-bs-slide="next">
                 <span class="carousel-control-next-icon section-three-navigation-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>

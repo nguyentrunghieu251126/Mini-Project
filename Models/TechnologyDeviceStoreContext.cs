@@ -34,8 +34,8 @@ public partial class TechnologyDeviceStoreContext : DbContext
     public virtual DbSet<Voucher> Vouchers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-    }
+        => optionsBuilder.UseSqlServer("Name=DefaultConnection");
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
@@ -57,15 +57,14 @@ public partial class TechnologyDeviceStoreContext : DbContext
             entity.Property(e => e.TaiKhoan)
                 .HasMaxLength(100)
                 .IsUnicode(false);
-            entity.Property(e => e.TongDiem).HasDefaultValue(0);
         });
 
         modelBuilder.Entity<Address>(entity =>
         {
             entity.HasKey(e => e.MaDiaChi);
 
+            entity.Property(e => e.DiaChiChiTiet).HasMaxLength(500);
             entity.Property(e => e.KhuVuc).HasMaxLength(255);
-            entity.Property(e => e.LaDiaChiMacDinh).HasDefaultValue(false);
             entity.Property(e => e.LoaiDiaChi).HasMaxLength(50);
             entity.Property(e => e.SoDienThoai)
                 .HasMaxLength(20)
@@ -83,7 +82,12 @@ public partial class TechnologyDeviceStoreContext : DbContext
 
             entity.ToTable("NCC");
 
-            entity.Property(e => e.MaNcc).HasColumnName("MaNCC");
+            entity.Property(e => e.MaNcc)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("MaNCC");
+            entity.Property(e => e.DiaChi).HasMaxLength(500);
             entity.Property(e => e.SoDienThoai)
                 .HasMaxLength(20)
                 .IsUnicode(false);
@@ -97,11 +101,13 @@ public partial class TechnologyDeviceStoreContext : DbContext
             entity.HasKey(e => e.MaDonHang);
 
             entity.Property(e => e.MaDonHang)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .IsFixedLength();
             entity.Property(e => e.MaVoucher)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .IsFixedLength();
             entity.Property(e => e.NgayDatHang)
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime");
@@ -139,8 +145,9 @@ public partial class TechnologyDeviceStoreContext : DbContext
             entity.HasKey(e => new { e.MaDonHang, e.MaBienThe });
 
             entity.Property(e => e.MaDonHang)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .IsFixedLength();
             entity.Property(e => e.DonGia).HasColumnType("decimal(18, 2)");
 
             entity.HasOne(d => d.MaBienTheNavigation).WithMany(p => p.OrderDetails)
@@ -159,17 +166,24 @@ public partial class TechnologyDeviceStoreContext : DbContext
             entity.HasKey(e => e.MaSp);
 
             entity.Property(e => e.MaSp)
-                .HasMaxLength(50)
+                .HasMaxLength(10)
                 .IsUnicode(false)
+                .IsFixedLength()
                 .HasColumnName("MaSP");
             entity.Property(e => e.DanhGia)
                 .HasDefaultValue(5.0m)
                 .HasColumnType("decimal(2, 1)");
+            entity.Property(e => e.DonGia).HasColumnType("decimal(18, 2)");
+            entity.Property(e => e.HinhAnh).IsUnicode(false);
             entity.Property(e => e.LoaiSp)
                 .HasMaxLength(50)
                 .IsUnicode(false)
                 .HasColumnName("LoaiSP");
-            entity.Property(e => e.MaNcc).HasColumnName("MaNCC");
+            entity.Property(e => e.MaNcc)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("MaNCC");
             entity.Property(e => e.TenSp)
                 .HasMaxLength(255)
                 .HasColumnName("TenSP");
@@ -189,13 +203,15 @@ public partial class TechnologyDeviceStoreContext : DbContext
             entity.Property(e => e.GiaCu).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.HinhAnh).IsUnicode(false);
             entity.Property(e => e.MaSp)
-                .HasMaxLength(50)
+                .HasMaxLength(10)
                 .IsUnicode(false)
+                .IsFixedLength()
                 .HasColumnName("MaSP");
             entity.Property(e => e.MauSac).HasMaxLength(50);
 
             entity.HasOne(d => d.MaSpNavigation).WithMany(p => p.ProductVariants)
                 .HasForeignKey(d => d.MaSp)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_ProductVariants_Products");
         });
 
@@ -209,8 +225,9 @@ public partial class TechnologyDeviceStoreContext : DbContext
                 .HasMaxLength(20)
                 .IsUnicode(false);
             entity.Property(e => e.MaDonHang)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .IsFixedLength();
             entity.Property(e => e.MoTa).HasMaxLength(255);
             entity.Property(e => e.NgayGiaoDich)
                 .HasDefaultValueSql("(getdate())")
@@ -222,6 +239,7 @@ public partial class TechnologyDeviceStoreContext : DbContext
 
             entity.HasOne(d => d.MaTaiKhoanNavigation).WithMany(p => p.RewardHistories)
                 .HasForeignKey(d => d.MaTaiKhoan)
+                .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_RewardHistory_Accounts");
         });
 
@@ -230,8 +248,9 @@ public partial class TechnologyDeviceStoreContext : DbContext
             entity.HasKey(e => e.MaVoucher);
 
             entity.Property(e => e.MaVoucher)
-                .HasMaxLength(50)
-                .IsUnicode(false);
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .IsFixedLength();
             entity.Property(e => e.DonHangToiThieu).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.GiaTriGiam).HasColumnType("decimal(18, 2)");
             entity.Property(e => e.LoaiGiamGia)
